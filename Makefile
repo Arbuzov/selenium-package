@@ -9,6 +9,7 @@ clean:
 deb-package: clean
 	install -d $(fakeRoot)
 	install -d $(fakeRoot)/DEBIAN
+	install -d build
 	install -d $(fakeRoot)/usr/share/doc/$(projectName)/
 	cp ./DEBIAN/control $(fakeRoot)/DEBIAN/
 	cp ./DEBIAN/postinst $(fakeRoot)/DEBIAN/
