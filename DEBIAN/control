@@ -7,3 +7,4 @@ Architecture: all
 Depends: mc, sudo, open-jdk
 Recommends: jenkins
 Description: selenium service deploy and run service
+ some new txt

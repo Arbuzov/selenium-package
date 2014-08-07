@@ -1,5 +1,5 @@
 Format : http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source : https://github.com/Arbuzov/jenkins-php
+Source : https://github.com/Arbuzov/selenium-package
 Files : *
 Copyright : Copyright 2014 Arbuzov Sergey <info@whitediver.com>
 License: MIT2
