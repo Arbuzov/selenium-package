@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+ln -fs /usr/share/selenium/selenium /etc/init.d/selenium
