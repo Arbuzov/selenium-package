@@ -13,7 +13,6 @@ deb-package: clean
 	install -d $(fakeRoot)/usr/share/doc/$(projectName)/
 	cp ./DEBIAN/control $(fakeRoot)/DEBIAN/
 	cp ./DEBIAN/postinst $(fakeRoot)/DEBIAN/
-	cp ./DEBIAN/conffiles $(fakeRoot)/DEBIAN/
 	sed -i 's/#build/$(BUILD_NUMBER)/' $(fakeRoot)/DEBIAN/control
 	cp ./DEBIAN/copyright $(fakeRoot)/usr/share/doc/$(projectName)/
 	gzip -c -9 ./DEBIAN/changelog > $(fakeRoot)/usr/share/doc/$(projectName)/changelog.gz
@@ -34,7 +33,5 @@ deb-package: clean
 	cp /tmp/$(projectName).deb build/
 deb-package-test: deb-package
 	lintian build/${projectName}.deb
-	sudo reprepro -b /mnt/repo/debian remove wheezy ${projectName}
-	sudo reprepro -b /mnt/repo/debian includedeb wheezy build/${projectName}.deb
-	sudo apt-get update
-	sudo apt-get -y upgrade $(projectName)
+	sudo reprepro -b /home/repository/ -C main remove squeezy ${projectName}
+	sudo reprepro -b /home/repository/ -C main includedeb squeezy build/${projectName}.deb
