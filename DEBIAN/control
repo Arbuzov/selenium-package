@@ -2,9 +2,8 @@ Section: misc
 Priority: optional
 Package: selenium-service
 Version: 1.0.#build
-Maintainer: Arbuzov <info@whitediver.com>
+Maintainer: Arbuzov Sergey <info@whitediver.com>
 Architecture: all
 Depends: mc, sudo, openjdk-6-jre
-Recommends: jenkins
 Description: selenium service deploy and run service
  some new txt
