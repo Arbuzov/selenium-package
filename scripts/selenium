@@ -43,6 +43,14 @@ case "${1:-''}" in
                         echo "Selenium is not running."
                 fi
                 ;;
+        'status')
+                if test -f /tmp/selenium.pid
+                then
+                        echo "Selenium is running."
+                else
+                        echo "Selenium is not running."
+                fi
+                ;;
         'restart')
                 if test -f /tmp/selenium.pid
                 then
